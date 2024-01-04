@@ -1,0 +1,105 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #1e0555;
+}
+body.quoteInput {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.container {
+  background-color: #f0db4f;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  width: 700px;
+  max-width: 90%;
+}
+.timer {
+  position: absolute;
+  top: 3rem;
+  font-size: 90px;
+  color: #f0db4f;
+  font-weight: bold;
+}
+.quote-display {
+  margin-bottom: 1rem;
+  margin-left: calc(1rem + 2px);
+  margin-right: calc(1rem + 2px);
+  font-size: 20px;
+  font-weight: bold;
+}
+.quoteInput {
+  background-color: transparent;
+  border: 2px solid #a1922e;
+  outline: none;
+  width: 100%;
+  height: 8rem;
+  margin: auto;
+  resize: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+}
+.quoteInput:focus {
+  border-color: black;
+}
+.correct {
+  color: green;
+}
+.incorrect {
+  color: red;
+  text-decoration: red;
+}
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 150px;
+}
+
+#main-container {
+  margin-bottom: 20px;
+}
+
+#quote-display {
+  margin-bottom: 10px;
+}
+
+#quoteInput {
+  margin-bottom: 10px;
+}
+
+.virtual-keyboard {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 5px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  position: fixed;
+  top: 510px;
+}
+
+.virtual-key {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.virtual-key:hover {
+  background-color: #f0f0f0;
+}
+
+.virtual-key.active {
+  background-color: #338f9b;
+  color: white;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
